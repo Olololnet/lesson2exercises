@@ -99,11 +99,15 @@ void Exercise4()
     if (iInput < 0)
         iInput *= -1;
 
-    for (int i = 1; i <= iInput; i++)
+    int iLastNum = iInput/2;
+
+    for (int i = 1; i <= iLastNum; i++)
     {
         if (!(iInput%i))
             std::cout << i << std::endl;
     }
+
+    std::cout << iInput << std::endl;
 }
 
 void Exercise5()
@@ -196,11 +200,11 @@ void Exercise7()
     {
         int iInput(0);
         std::cin >> iInput;
-        if (!i) //1
+        if (!i)
         {
             iBiggestMaximum = iInput;
         }
-        else    //2+
+        else
         {
             if (iInput >= iBiggestMaximum)
             {
@@ -208,7 +212,7 @@ void Exercise7()
                 iBiggestMaximum = iInput;
                 isSmallerNotExists = false;
             }
-            else if ((iInput < iBiggestMaximum && iInput > iSmallerMaximum) || isSmallerNotExists) //по первому приходу смаллер = 0 что неверно
+            else if ((iInput < iBiggestMaximum && iInput > iSmallerMaximum) || isSmallerNotExists)
             {
                 iSmallerMaximum = iInput;
                 isSmallerNotExists = false;
